@@ -1,0 +1,51 @@
+CRITICAL - 2023-03-08 02:40:35 --> Class "CodeIgniter\Database\postgre\Connection" not found
+in SYSTEMPATH/Database/Database.php on line 139.
+ 1 SYSTEMPATH/Database/Database.php(56): CodeIgniter\Database\Database->initDriver()
+ 2 SYSTEMPATH/Database/Config.php(82): CodeIgniter\Database\Database->load()
+ 3 SYSTEMPATH/Common.php(362): CodeIgniter\Database\Config::connect()
+ 4 SYSTEMPATH/Database/MigrationRunner.php(151): db_connect()
+ 5 SYSTEMPATH/Config/Services.php(411): CodeIgniter\Database\MigrationRunner->__construct()
+ 6 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::migrations()
+ 7 SYSTEMPATH/Config/BaseService.php(193): CodeIgniter\Config\BaseService::__callStatic()
+ 8 SYSTEMPATH/Config/Services.php(406): CodeIgniter\Config\BaseService::getSharedInstance()
+ 9 SYSTEMPATH/Config/BaseService.php(252): CodeIgniter\Config\Services::migrations()
+10 SYSTEMPATH/Commands/Database/Migrate.php(69): CodeIgniter\Config\BaseService::__callStatic()
+11 SYSTEMPATH/CLI/Commands.php(65): CodeIgniter\Commands\Database\Migrate->run()
+12 SYSTEMPATH/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+13 ROOTPATH/spark(97): CodeIgniter\CLI\Console->run()
+ERROR - 2023-03-08 08:20:50 --> Error connecting to the database: ErrorException: pg_connect(): Unable to connect to PostgreSQL server: connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections? in /var/www/html/Hotelmgmt/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php:75
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/Hotelmgmt/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php(75): pg_connect()
+#2 /var/www/html/Hotelmgmt/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\Postgre\Connection->connect()
+#3 /var/www/html/Hotelmgmt/vendor/codeigniter4/framework/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#4 /var/www/html/Hotelmgmt/vendor/codeigniter4/framework/system/Database/BaseConnection.php(1408): CodeIgniter\Database\BaseConnection->query()
+#5 /var/www/html/Hotelmgmt/vendor/codeigniter4/framework/system/Database/BaseConnection.php(1427): CodeIgniter\Database\BaseConnection->listTables()
+#6 /var/www/html/Hotelmgmt/vendor/codeigniter4/framework/system/Database/MigrationRunner.php(768): CodeIgniter\Database\BaseConnection->tableExists()
+#7 /var/www/html/Hotelmgmt/vendor/codeigniter4/framework/system/Database/MigrationRunner.php(168): CodeIgniter\Database\MigrationRunner->ensureTable()
+#8 /var/www/html/Hotelmgmt/vendor/codeigniter4/framework/system/Commands/Database/Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest()
+#9 /var/www/html/Hotelmgmt/vendor/codeigniter4/framework/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Migrate->run()
+#10 /var/www/html/Hotelmgmt/vendor/codeigniter4/framework/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#11 /var/www/html/Hotelmgmt/spark(97): CodeIgniter\CLI\Console->run()
+#12 {main}
+ERROR - 2023-03-08 11:38:24 --> Error connecting to the database: ErrorException: pg_connect(): Unable to connect to PostgreSQL server: connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections? in /var/www/html/Hotelmgmt/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php:75
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/Hotelmgmt/vendor/codeigniter4/framework/system/Database/Postgre/Connection.php(75): pg_connect()
+#2 /var/www/html/Hotelmgmt/vendor/codeigniter4/framework/system/Database/BaseConnection.php(391): CodeIgniter\Database\Postgre\Connection->connect()
+#3 /var/www/html/Hotelmgmt/vendor/codeigniter4/framework/system/Database/BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#4 /var/www/html/Hotelmgmt/vendor/codeigniter4/framework/system/Database/BaseConnection.php(1408): CodeIgniter\Database\BaseConnection->query()
+#5 /var/www/html/Hotelmgmt/vendor/codeigniter4/framework/system/Database/BaseConnection.php(1427): CodeIgniter\Database\BaseConnection->listTables()
+#6 /var/www/html/Hotelmgmt/vendor/codeigniter4/framework/system/Database/MigrationRunner.php(768): CodeIgniter\Database\BaseConnection->tableExists()
+#7 /var/www/html/Hotelmgmt/vendor/codeigniter4/framework/system/Database/MigrationRunner.php(168): CodeIgniter\Database\MigrationRunner->ensureTable()
+#8 /var/www/html/Hotelmgmt/vendor/codeigniter4/framework/system/Commands/Database/Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest()
+#9 /var/www/html/Hotelmgmt/vendor/codeigniter4/framework/system/CLI/Commands.php(65): CodeIgniter\Commands\Database\Migrate->run()
+#10 /var/www/html/Hotelmgmt/vendor/codeigniter4/framework/system/CLI/Console.php(37): CodeIgniter\CLI\Commands->run()
+#11 /var/www/html/Hotelmgmt/spark(97): CodeIgniter\CLI\Console->run()
+#12 {main}
